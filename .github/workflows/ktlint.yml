@@ -35,3 +35,8 @@ jobs:
               echo Found ktlintCheck XML file: $ktlintxml
               reviewdog -f=checkstyle -name=ktlint -filter-mode=nofilter -reporter=github-pr-review <$ktlintxml
           done
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
